@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+
+class HomePage extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar( title: Text("더 조은:웹"),),
+      body: Center(
+        child: ElevatedButton(
+            onPressed: (){ Navigator.pushNamed(context, "/detail"); },
+            child: Text("특정페이지 이동")),
+      ),
+    );
+  }
+}
+
+// <a href=""> , <Link to=""> , push

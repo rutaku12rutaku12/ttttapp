@@ -38,25 +38,30 @@ class TodoWidgetState extends State<TodoWidget> {
     }catch(e){print(e);}
   }
 
-  void getTodoList() async{
-    try{
-      final dio = Dio();
-      final response = await dio.get("http://192.168.40.235:8080/api/goods/list");
-      final data = response.data;
-      print(data);
-      setState(() { todoList = data; } );
-    }catch(e){print(e);}
-  }
-  // 최초 조회 1회실행
-  void initState() { getTodoList(); }
-  // dio로 가져온 데이터 저장하는 상태 변수
-  dynamic todoList = [];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("할 일 "),),
-      body:
+      appBar: AppBar(title: Text("할 일 목록 "),),
+      body: Padding(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            children: [
+              TextField(
+                decoration: InputDecoration(labelText: "제목"),
+                controller: titleCont,
+              ),
+               SizedBox(height: 100,),
+
+              TextField(
+                decoration: InputDecoration(labelText: "내용"),
+                controller: conCont,
+              ),
+              SizedBox(height: 100,),
+
+              ElevatedButton(onPressed: createTodo, child: Text("할 일 등록") ),
+            ],
+          ),
+      )
     );
   }
 }

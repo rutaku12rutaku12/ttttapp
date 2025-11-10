@@ -24,9 +24,14 @@ class MainPageState extends State<MainPage>{
           onTap: (index){setState(()=> { currentPageIndex = index } ); },
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.create,size: 100, color: Colors.pinkAccent,)),
+                icon: Icon(Icons.abc, size: 100, color: Colors.amber,) ,
+                label: "홈"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.list_alt,size: 100,color: Colors.pinkAccent,))
+                icon: Icon(Icons.create,size: 100, color: Colors.pinkAccent,) ,
+                label: "쓰기"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.list_alt,size: 100,color: Colors.pinkAccent,) ,
+                label: "보기")
           ]),
     );
   }

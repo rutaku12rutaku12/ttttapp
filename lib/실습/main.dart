@@ -4,7 +4,7 @@ import 'package:ttttapp/%EC%8B%A4%EC%8A%B5/pages/GetPage.dart';
 import 'package:ttttapp/%EC%8B%A4%EC%8A%B5/pages/MainPage.dart';
 
 void main(){
-  runApp( MyApp ) );
+  runApp( MyApp() );
 
 }
 

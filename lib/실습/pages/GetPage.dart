@@ -21,7 +21,7 @@ class TodoWidgetState extends State<TodoWidget>{
   void getTodoList() async{
     try{
       final dio = Dio();
-      final response = await dio.get("http://192.168.40.235:8080/api/goods/list");
+      final response = await dio.get("http://192.168.40.235:8080/api/todo");
       final data = response.data;
       print(data);
       setState(() { todoList = data; } );

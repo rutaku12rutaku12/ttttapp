@@ -8,9 +8,8 @@ class MainPage extends StatefulWidget{
 }
 
 class MainPageState extends State<MainPage>{
-  int currentPageIndex = 0;
+  int currentPageIndex = 1;
   dynamic pages = [
-    MainPage() ,
     CreatePage() ,
     GetPage() ,
   ];

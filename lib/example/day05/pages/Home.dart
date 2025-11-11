@@ -55,7 +55,7 @@ class HomeState extends State<Home>{
                       IconButton(
                           onPressed: (){
                             final result = Navigator.pushNamed(context,"/update" , arguments: todo['id'] );
-                            // 만약에 push 한 위젯에 pop 했을때 반환ㄱ밧 받아서 특정 로직 구현
+                            // 만약에 push 한 위젯에 pop 했을때 반환값 받아서 특정 로직 구현
                             if( result == true ){findAll();}
                             },
                           icon: Icon( Icons.edit_road_sharp ,size: 50, color: Colors.redAccent,) ),

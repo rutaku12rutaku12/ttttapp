@@ -1,0 +1,24 @@
+// 메인 다트가 라우터 역할
+
+import 'package:flutter/material.dart';
+import 'package:ttttapp/example/day05/pages/Detail.dart';
+import 'package:ttttapp/example/day05/pages/Home.dart';
+import 'package:ttttapp/example/day05/pages/Update.dart';
+
+void main() {
+  runApp( MyApp());
+}
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      initialRoute: "/",
+      // routes: { "경로정의" : (context)=>위젯명() },
+      routes: {
+        "/" : (context)=> Home() ,
+        "/detail" : (context)=> Detail(),
+        "/update" : (context)=> Update(),
+      },
+    );
+  }
+}

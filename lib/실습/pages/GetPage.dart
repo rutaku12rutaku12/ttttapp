@@ -10,7 +10,7 @@ class GetPageState extends State<GetPage>{
   void getTodoList() async{
     try{
       final dio = Dio();
-      final response = await dio.get("http://10.0.2.2:8080/api/goods/list");
+      final response = await dio.get("http://10.0.2.2:8080/api/todo");
       final data = response.data;
       print(data);
       setState(() { todoList = data; } );

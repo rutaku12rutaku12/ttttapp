@@ -1,22 +1,15 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
-class CreatePage extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("등록"),),
-      body: Text("등록 페이지"),
-    );
-  }
-}
+
 // 위젯 만들기 (컴포넌트)
-class TodoWidget extends StatefulWidget{
-  TodoWidgetState createState() => TodoWidgetState();
+class CreatePage extends StatefulWidget{
+
+  CreatePageState createState() => CreatePageState();
 }
 
 // 상태 하위 위젯
-class TodoWidgetState extends State<TodoWidget> {
+class CreatePageState extends State<CreatePage> {
 
   // 입력상자 컨트롤러
   TextEditingController titleCont = TextEditingController();
@@ -33,7 +26,7 @@ class TodoWidgetState extends State<TodoWidget> {
     try {
       final dio = Dio();
       final response = await dio.post(
-          "http://192.168.40.235:8080/api/todo", data: obj);
+          "http://10.0.2.2:8080/api/todo", data: obj);
       print(response.data);
     }catch(e){print(e);}
   }

@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:ttttapp/%EC%8B%A4%EC%8A%B5/pages/CreatePage.dart';
 import 'package:ttttapp/%EC%8B%A4%EC%8A%B5/pages/GetPage.dart';
+import 'package:ttttapp/%EC%8B%A4%EC%8A%B5/pages/HomePage.dart';
 
 class MainPage extends StatefulWidget{
   MainPageState createState()=>MainPageState();
@@ -10,7 +11,7 @@ class MainPage extends StatefulWidget{
 class MainPageState extends State<MainPage>{
   int currentPageIndex = 0;
   dynamic pages = [
-    MainPage() ,
+    HomePage() ,
     CreatePage() ,
     GetPage() ,
   ];

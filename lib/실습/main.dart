@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ttttapp/%EC%8B%A4%EC%8A%B5/pages/CreatePage.dart';
 import 'package:ttttapp/%EC%8B%A4%EC%8A%B5/pages/GetPage.dart';
+import 'package:ttttapp/%EC%8B%A4%EC%8A%B5/pages/HomePage.dart';
 import 'package:ttttapp/%EC%8B%A4%EC%8A%B5/pages/MainPage.dart';
 
 void main(){
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget{
       initialRoute: "/",
       routes: {
         "/" : (context) => MainPage() ,
+        "/home" : (context) => HomePage(),
         "/create" : (context) => CreatePage() ,
         "/get" : (context) => GetPage() ,
       },
